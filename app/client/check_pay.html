@@ -3,55 +3,32 @@
         <h2>Check Pay</h2>
 
 
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.12.3.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 
-
-        <div class="rows">
+<div class="rows">
 <table id="example2" class="display" cellspacing="0" width="100%">
 	<thead>
 		<tr>
 			<th>사용자 등록번호</th>
-			<th>확인</th>
+            <th>결제 정보</th>
+            <th>수출증빙자료 다운로드</th>
+			<th>송금내역</th>
+            <th>날짜</th>
+            <th>상세내역 확인</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>1111111111</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(0)"></td>
+            <td>20150312_US30000</td>
+			<td><input type="button" class='btn btn-default btn-sm' value='download'></td>
+            <td>toUS_Fruit</td>
+            <td>2011/05/07</td>
+            <td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(0)"></td>
 		</tr>
-        <tr>
-			<td>2222222222</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
-		</tr>
-        <tr>
-			<td>3333333333</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
-		</tr>
-        <tr>
-			<td>4444444444</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
-		</tr>
-        <tr>
-			<td>5555555555</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
-		</tr>
-        <tr>
-			<td>6666666666</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
-		</tr>
-        <tr>
-			<td>7777777777</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
-		</tr>
-        <tr>
-			<td>8888888888</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
-		</tr>
-        <tr>
-			<td>9999999999</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
-		</tr>
-        
-        
 	</tbody>
 </table>
 </div>
@@ -64,7 +41,7 @@ var table = '';
 function c1(rows)
 {
 	this_row = table.rows(rows).data();
-	$('#rlt2').html( "사용자 등록번호: "+this_row[0][0]+"<br>수출기업 신용 내역: "+this_row[0][2] );
+	$('#rlt2').html( "사용자 등록번호: "+this_row[0][0]+"<br>결제 정보: "+this_row[0][1]+"<br>수출증빙자료 다운로드: "+this_row[0][2]+"<br>송금 내역: "+this_row[0][3]+"<br>날짜: "+this_row[0][4]+"<br>상세내역 확인: "+this_row[0][5] );
 }
 
 $(function(){
@@ -72,10 +49,8 @@ $(function(){
 });
 </script>
 
-    </div>
+</div>
 
 
 
-
-    
 </template>
