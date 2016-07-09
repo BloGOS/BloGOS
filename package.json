@@ -1,0 +1,19 @@
+{
+  "name": "quickstart-meteor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoreaHTML5/quickstart-meteor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KoreaHTML5/quickstart-meteor/issues"
+  },
+  "homepage": "https://github.com/KoreaHTML5/quickstart-meteor#readme"
+}
