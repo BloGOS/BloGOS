@@ -1,17 +1,25 @@
 FlowRouter.route('/', {
-    action: function() {
-        Session.set('pageId');
+    action: function (params) { 
+        BlazeLayout.render("main", {content: "main"});
     }
 });
-FlowRouter.route('/main/:main', {
-    name: 'main',
-    action: function(params) {
-        Session.set('main', params.main);
+FlowRouter.route('/auth', {
+    action: function (params) { 
+        BlazeLayout.render("auth", {content: "auth"});
     }
 });
-FlowRouter.route('/auth/:auth', {
-    name: 'auth',
-    action: function (params) {
-        this.render('auth');
+FlowRouter.route('/check_code', {
+    action: function (params) { 
+        BlazeLayout.render("check_code", {content: "check_code"});
     }
-})
+});
+FlowRouter.route('/check_pay', {
+    action: function (params) { 
+        BlazeLayout.render("check_pay", {content: "check_pay"});
+    }
+});
+FlowRouter.route('/insert', {
+    action: function (params) { 
+        BlazeLayout.render("insert", {content: "insert"});
+    }
+});
