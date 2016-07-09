@@ -1,20 +1,33 @@
 <template name="head">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
+            <!-- brand -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Quickstart for Meteor</a>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target=".navbar-collapse">
+                <a class="navbar-brand" href="/">BloGOS</a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
             </div>
+            <!-- brand end -->
+
+            <!-- page nav -->
+            <ul class="nav navbar-nav">
+                <li><a href="/auth">인증</a></li>
+                <li><a href="/insert">결제작성</a></li>
+                <li><a href="/check_pay">결제확인</a></li>
+                <li><a href="/check_node">수출확인</a></li>
+            </ul>
+            <!-- page nav end -->
+
+            <!-- login -->
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     {{> loginButtons}}
                 </ul>
             </div>
+            <!-- login end -->
         </div>
     </nav>
 </template>
