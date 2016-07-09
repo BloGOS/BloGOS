@@ -1,5 +1,7 @@
 <template name="check_pay">
 	<div class="container">
+
+		{{#if currentUser}}
 		<link rel="stylesheet" href="/styles/datatables.min.css">
 		<link href="/script/jquery-1.12.3.js">
 		<link href="/script/jquery.dataTables.min.js">
@@ -48,8 +50,9 @@ function c1(rows)
 $(function(){
 	table = $('#example2').DataTable();
 });
-</script>
-
+</script> {{else}}
+		<h3>로그인이 필요한 서비스입니다.</h3>
+		{{/if}}
 	</div>
 
 
