@@ -14,54 +14,6 @@
 
 
 
-<div class="rows">
-<table id="example2" class="display" cellspacing="0" width="100%">
-	<thead>
-		<tr>
-			<th>성명</th>
-			<th>직위</th>
-			<th>직업</th>
-			<th>click</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>홍길동</td>
-			<td>대리</td>
-			<td>프로그래머</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(0)"></td>
-		</tr>
-		<tr>
-			<td>임꺽정</td>
-			<td>두목</td>
-			<td>산적</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
-		</tr>
-	</tbody>
-</table>
-</div>
-
-<div id='rlt2' style="border:1px solid black;margin:20px 0 0 0 ;padding:10px;"></div>
-
-<script>
-var table = '';
-
-function c1(rows)
-{
-	this_row = table.rows(rows).data();
-	$('#rlt2').html( "성명:"+this_row[0][0]+"<br>직위:"+this_row[0][1]+"<br>직업:"+this_row[0][2] );
-}
-
-$(function(){
-	table = $('#example2').DataTable();
-});
-</script>
-
-
-
-
-
-
 <script type="text/javascript">
 
     $(document).ready(function() {
