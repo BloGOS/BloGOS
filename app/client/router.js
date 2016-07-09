@@ -23,3 +23,16 @@ FlowRouter.route('/insert', {
         BlazeLayout.render("insert", {content: "insert"});
     }
 });
+FlowRouter.route('/fileUpload', {
+    action: function (params) {
+	this.render("insert", {content: "insert"});
+    }
+});
+
+
+
+
+
+
+
+

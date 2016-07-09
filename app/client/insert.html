@@ -1,6 +1,7 @@
+
 <template name="insert">
-    <div class="container" style="float:right">
-        <h2>거래정보입력</h2>
+    <div class="container">
+        <h2>거래정보입력</h2>	
 	
 	<hr>
 	
@@ -15,15 +16,13 @@
 	</form>
 	<br><br><br>
 
-	<hr>
+	
 	
 	<br>
 	<h2>수출 증빙 자료 전송</h2>
 
-    </div>
-	
-    <div class="image" stype="float:left">
-    	<img src="/images/2.png">
+	{{> fileList}}
+
     </div>
    
 </template>
