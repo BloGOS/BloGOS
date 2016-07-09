@@ -26,8 +26,7 @@ standard-minifier-css
 standard-minifier-js
 kadira:blaze-layout
 shepelt:coinstack
-<<<<<<< HEAD
 cfs:standard-packages
 cfs:filesystem
-=======
->>>>>>> 5d3dbc8fc4f2e7fb301b5803f5dfca676c53402c
+
+
