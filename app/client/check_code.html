@@ -1,13 +1,16 @@
 <template name="check_code">
 	<div class="container">
-		<h2>Check Code</h2>
 
 		<link rel="stylesheet" href="/styles/datatables.min.css">
 		<link href="/script/jquery-1.12.3.js">
 		<link href="/script/jquery.dataTables.min.js">
 		<link href="/script/datatables.min.js">
 
-		<div class="rows">
+		<div id="check_code_img">
+			<img src="/images/4.png">
+		</div>
+
+		<div id="check_code_con" class="rows">
 			<table id="example2" class="display" cellspacing="0" width="100%">
 				<thead>
 					<tr>
@@ -29,7 +32,7 @@
 			</table>
 		</div>
 
-		<div id='rlt2' style="border:1px solid black;margin:20px 0 0 0 ;padding:10px;"></div>
+		<div id='rlt2'></div>
 
 		<script>
 var table = '';
