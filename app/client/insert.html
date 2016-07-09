@@ -1,8 +1,7 @@
 <template name="insert">
-
     <div class="container">
-   {{#if currentUser}}
-	
+   
+	{{#if currentUser}}	
 		<div id="insert_code_img">
 				<img src="/images/2.png" width="400px" height="400px" >
 				<h4> 결제정보와 수출증빙자료를 전송하는 페이지 입니다.
@@ -31,10 +30,11 @@
 		<h4>수출 증빙 자료 전송</h4>
 
 		{{> fileList}}
-	 {{else}}
+	
+		</div>
+		{{else}}
 		<h3>로그인이 필요한 서비스입니다.</h3>
 		{{/if}}
-		</div>
     </div>
    
 </template>
