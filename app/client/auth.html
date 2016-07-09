@@ -1,13 +1,20 @@
 <template name="auth">
     <div class="container">
-        <h2>Auth Page</h2>
-
-				<link rel="stylesheet" href="/styles/datatables.min.css">
+		<link rel="stylesheet" href="/styles/datatables.min.css">
 		<link href="/script/jquery-1.12.3.js">
 		<link href="/script/jquery.dataTables.min.js">
 		<link href="/script/datatables.min.js">
 
-<div class="rows">
+
+<div id="auth_code_img" >
+			<img src="/images/1.png" width="400px" height="400px" >
+			<h4> 수출 기업의 신용을 확인 할 수 있는 페이지 입니다. 
+				기업의 사업자 등록번호를 검색하여 수출 기업의 신용을 확인 할 수 있습니다.
+			</h4>
+</div>
+
+
+<div id="auth_code_con" class="rows">
 <table id="example2" class="display" cellspacing="0" width="100%">
 	<thead>
 		<tr>
@@ -58,7 +65,7 @@
 </table>
 </div>
 
-<div id='rlt2' style="border:1px solid black;margin:20px 0 0 0 ;padding:10px;"></div>
+<div id='rlt2'></div>
 
 <script>
 var table = '';
