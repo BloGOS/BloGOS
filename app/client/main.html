@@ -1,0 +1,20 @@
+<template name="main">
+    <div class="container">
+        <img class="logo" src="/images/main.png">
+        <h2>Input box with Button</h2>
+        <form>
+            <div class="input-group">
+                <input type="text" id="post" class="form-control" placeholder="리스트뷰에 보일 메시지를 작성해주세요."/>
+                <div class="input-group-btn">
+                    <button class="btn btn-primary">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                        <span>Post</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <br/>
+        <h2>List View from DataBase </h2>
+        {{> posts}}
+    </div>
+</template>
