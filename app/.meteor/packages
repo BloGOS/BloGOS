@@ -25,3 +25,6 @@ check
 standard-minifier-css
 standard-minifier-js
 kadira:blaze-layout
+shepelt:coinstack
+cfs:standard-packages
+cfs:filesystem
