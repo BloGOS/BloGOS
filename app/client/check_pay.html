@@ -1,39 +1,42 @@
 <template name="check_pay">
-    <div class="container">
-        <h2>Check Pay</h2>
+	<div class="container">
 		<link rel="stylesheet" href="/styles/datatables.min.css">
 		<link href="/script/jquery-1.12.3.js">
 		<link href="/script/jquery.dataTables.min.js">
 		<link href="/script/datatables.min.js">
 
-<div class="rows">
-<table id="example2" class="display" cellspacing="0" width="100%">
-	<thead>
-		<tr>
-			<th>사용자 등록번호</th>
-            <th>결제 정보</th>
-            <th>수출증빙자료 다운로드</th>
-			<th>송금내역</th>
-            <th>날짜</th>
-            <th>상세내역 확인</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>1111111111</td>
-            <td>20150312_US30000</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='download'></td>
-            <td>toUS_Fruit</td>
-            <td>2011/05/07</td>
-            <td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(0)"></td>
-		</tr>
-	</tbody>
-</table>
-</div>
+		<div id="check_pay_img">
+			<img src="/images/3.png">
+		</div>
 
-<div id='rlt2' style="border:1px solid black;margin:20px 0 0 0 ;padding:10px;"></div>
+		<div class="rows">
+			<table id="example2" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th>사용자 등록번호</th>
+						<th>결제 정보</th>
+						<th>수출증빙자료 다운로드</th>
+						<th>송금내역</th>
+						<th>날짜</th>
+						<th>상세내역 확인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1111111111</td>
+						<td>20150312_US30000</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='download'></td>
+						<td>toUS_Fruit</td>
+						<td>2011/05/07</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(0)"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
-<script>
+		<div id='rlt2'></div>
+
+		<script>
 var table = '';
 
 function c1(rows)
@@ -47,7 +50,7 @@ $(function(){
 });
 </script>
 
-</div>
+	</div>
 
 
 
