@@ -1,5 +1,82 @@
 <template name="auth">
     <div class="container">
         <h2>Auth Page</h2>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.12.3.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
+
+<div class="rows">
+<table id="example2" class="display" cellspacing="0" width="100%">
+	<thead>
+		<tr>
+			<th>사용자 등록코드</th>
+			<th>확인</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1111111111</td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(0)"></td>
+		</tr>
+        <tr>
+			<td>2222222222</td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
+		</tr>
+        <tr>
+			<td>3333333333</td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
+		</tr>
+        <tr>
+			<td>4444444444</td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
+		</tr>
+        <tr>
+			<td>5555555555</td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
+		</tr>
+        <tr>
+			<td>6666666666</td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
+		</tr>
+        <tr>
+			<td>7777777777</td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
+		</tr>
+        <tr>
+			<td>8888888888</td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
+		</tr>
+        <tr>
+			<td>9999999999</td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
+		</tr>
+        
+        
+	</tbody>
+</table>
+</div>
+
+<div id='rlt2' style="border:1px solid black;margin:20px 0 0 0 ;padding:10px;"></div>
+
+<script>
+var table = '';
+
+function c1(rows)
+{
+	this_row = table.rows(rows).data();
+	$('#rlt2').html( "사용자 등록코드: "+this_row[0][0]+"<br>수출기업 신용 내역: "+this_row[0][2] );
+}
+
+$(function(){
+	table = $('#example2').DataTable();
+});
+</script>
+
+
+
+
     </div>
 </template>
