@@ -14,6 +14,11 @@ Accounts.ui.config({
         inputType: 'select',
         data: [
             {
+                id: 0,
+                label: "IBK",
+                value: 0
+            },
+            {
                 id: 1,
                 label: "해외 오픈마켓",
                 value: 1

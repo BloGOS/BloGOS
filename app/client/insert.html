@@ -1,7 +1,7 @@
-
 <template name="insert">
+
     <div class="container">
-   
+   {{#if currentUser}}
 	
 		<div id="insert_code_img">
 				<img src="/images/2.png" width="400px" height="400px" >
@@ -31,7 +31,9 @@
 		<h4>수출 증빙 자료 전송</h4>
 
 		{{> fileList}}
-	
+	 {{else}}
+		<h3>로그인이 필요한 서비스입니다.</h3>
+		{{/if}}
 		</div>
     </div>
    
