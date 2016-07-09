@@ -12,7 +12,7 @@
 <table id="example2" class="display" cellspacing="0" width="100%">
 	<thead>
 		<tr>
-			<th>사용자 등록코드</th>
+			<th>사용자 등록번호</th>
 			<th>확인</th>
 		</tr>
 	</thead>
@@ -27,31 +27,31 @@
 		</tr>
         <tr>
 			<td>3333333333</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(2)"></td>
 		</tr>
         <tr>
 			<td>4444444444</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(3)"></td>
 		</tr>
         <tr>
 			<td>5555555555</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(4)"></td>
 		</tr>
         <tr>
 			<td>6666666666</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(5)"></td>
 		</tr>
         <tr>
 			<td>7777777777</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(6)"></td>
 		</tr>
         <tr>
 			<td>8888888888</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(7)"></td>
 		</tr>
         <tr>
 			<td>9999999999</td>
-			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(1)"></td>
+			<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(8)"></td>
 		</tr>
         
         
@@ -67,7 +67,7 @@ var table = '';
 function c1(rows)
 {
 	this_row = table.rows(rows).data();
-	$('#rlt2').html( "사용자 등록코드: "+this_row[0][0]+"<br>수출기업 신용 내역: "+this_row[0][2] );
+	$('#rlt2').html( "사용자 등록번호: "+this_row[0][0]+"<br>수출기업 신용 내역: "+this_row[0][2] );
 }
 
 $(function(){
