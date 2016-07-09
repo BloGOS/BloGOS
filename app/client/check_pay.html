@@ -20,12 +20,13 @@
 			<table id="example2" class="display" cellspacing="0" width="100%">
 				<thead>
 					<tr>
-						<th>사용자 등록번호</th>
+						<th>사업자 등록번호</th>
 						<th>결제 정보</th>
-						<th>수출증빙자료 다운로드</th>
+						<th>수출증빙자료</th>
 						<th>송금내역</th>
 						<th>날짜</th>
-						<th>상세내역 확인</th>
+						<th>송금확인</th>
+						<th>수출사유코드</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -35,7 +36,8 @@
 						<td><input type="button" class='btn btn-default btn-sm' value='download'></td>
 						<td>toUS_Fruit</td>
 						<td>2011/05/07</td>
-						<td><input type="button" class='btn btn-default btn-sm' value='click' onclick="c1(0)"></td>
+						<td><input type="button" class='btn btn-default btn-sm' value='확인' onclick="c1(0)"></td>
+						<td><input type="button" class='btn btn-default btn-sm' value='생성' onclick="c1(0)"></td>
 					</tr>
 				</tbody>
 			</table>
@@ -49,7 +51,7 @@ var table = '';
 function c1(rows)
 {
 	this_row = table.rows(rows).data();
-	$('#rlt2').html( "사용자 등록번호: "+this_row[0][0]+"<br>결제 정보: "+this_row[0][1]+"<br>수출증빙자료 다운로드: "+this_row[0][2]+"<br>송금 내역: "+this_row[0][3]+"<br>날짜: "+this_row[0][4]+"<br>상세내역 확인: "+this_row[0][5] );
+	$('#rlt2').html( );
 }
 
 $(function(){
