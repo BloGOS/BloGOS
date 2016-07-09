@@ -3,10 +3,15 @@ FlowRouter.route('/', {
         Session.set('pageId');
     }
 });
-FlowRouter.route('/page/:pageId', {
+FlowRouter.route('/main/:main', {
     name: 'main',
     action: function(params) {
-        Session.set('pageId', params.pageId);
+        Session.set('main', params.main);
     }
 });
-
+FlowRouter.route('/auth/:auth', {
+    name: 'auth',
+    action: function (params) {
+        this.render('auth');
+    }
+})
