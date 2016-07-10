@@ -1,3 +1,3 @@
 
-var username = Meteor.userId();
-console.log(username);
+//var username = Meteor.userId();
+//console.log(username);
