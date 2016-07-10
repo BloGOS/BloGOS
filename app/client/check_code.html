@@ -2,6 +2,7 @@
 	<div class="container">
 
 		{{#if currentUser}}
+
 		<link rel="stylesheet" href="/styles/datatables.min.css">
 		<link href="/script/jquery-1.12.3.js">
 		<link href="/script/jquery.dataTables.min.js">
@@ -10,14 +11,13 @@
 
 		 
 
-		<script>
-			console.output(users.find());
-		</script>
-	
+		<div>
+			{{> blockList}}
+		</div>
+
 		<div id="check_code_img">
-			<img class="animated webkit-keyframes flipInX" src="/images/4.png" width="400px" height="400px">
-			<h4> 블록체인에 있는 기업의 수출사유코드를 확인할 수 있는 페이지 입니다.
-			수출사유코드가 존재한다면, IBK에서 인정한 수출 실적 1건임이 증명됩니다.</h4>
+			<img src="/images/4.png" width="400px" height="400px">
+			<h4> 블록체인에 있는 기업의 수출사유코드를 확인할 수 있는 페이지 입니다. 수출사유코드가 존재한다면, IBK에서 인정한 수출 실적 1건임이 증명됩니다.</h4>
 		</div>
 
 		<div id="check_code_con" class="rows">
@@ -45,37 +45,93 @@
 				<tbody>
 					<tr>
 						<th>1</th>
-						<td>1111111111</td>
-						<td>86000000jbpdf</td>
-						<td>2011/05/07</td>
+						<td>106-87-07511</td>
+						<td>52120.0096.00</td>
+						<td>2016/07/09</td>
 						<td><input type="button" class='btn btn-default btn-sm' value='click'></td>
 					</tr>
 					<tr>
 						<th>2</th>
-						<td>2222222222</td>
-						<td>75000000jbpdf</td>
-						<td>2014/01/02</td>
+						<td>109-04-44278</td>
+						<td>91750.00600.00</td>
+						<td>2016/07/09</td>
 						<td><input type="button" class='btn btn-default btn-sm' value='click'></td>
 					</tr>
 					<tr>
 						<th>3</th>
-						<td>3333333333</td>
-						<td>12000000jbpdf</td>
-						<td>2015/12/27</td>
+						<td>119-86-52830</td>
+						<td>13388.4070.72</td>
+						<td>2016/07/09</td>
 						<td><input type="button" class='btn btn-default btn-sm' value='click'></td>
 					</tr>
 					<tr>
 						<th>4</th>
-						<td>4444444444</td>
-						<td>84000000jbpdf</td>
-						<td>2016/03/01</td>
+						<td>119-86-72200</td>
+						<td>33270.00216.00</td>
+						<td>2016/07/09</td>
 						<td><input type="button" class='btn btn-default btn-sm' value='click'></td>
 					</tr>
 					<tr>
 						<th>5</th>
-						<td>5555555555</td>
-						<td>13000000jbpdf</td>
-						<td>2013/12/01</td>
+						<td>120-87-89687</td>
+						<td>3382.2565.80</td>
+						<td>2016/07/09</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='click'></td>
+					</tr>
+										<tr>
+						<th>6</th>
+						<td>124-86-88932</td>
+						<td>9574.6059.68</td>
+						<td>2016/07/09</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='click'></td>
+					</tr>
+										<tr>
+						<th>7</th>
+						<td>128-87-01934</td>
+						<td>90200.00160.00</td>
+						<td>2016/07/09</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='click'></td>
+					</tr>
+										<tr>
+						<th>8</th>
+						<td>124-86-88932</td>
+						<td>9599.0079.20</td>
+						<td>2016/07/09</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='click'></td>
+					</tr>
+										<tr>
+						<th>9</th>
+						<td>130-86-76445</td>
+						<td>95225.75180.60</td>
+						<td>2016/07/09</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='click'></td>
+					</tr>
+										<tr>
+						<th>10</th>
+						<td>130-86-76445</td>
+						<td>33825.00660.00</td>
+						<td>2016/07/10</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='click'></td>
+					</tr>
+										<tr>
+						<th>11</th>
+						<td>106-87-07511</td>
+						<td>521600.001280.00</td>
+						<td>2016/07/10</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='click'></td>
+					</tr>
+										<tr>
+						<th>12</th>
+						<td>108-18-49995</td>
+						<td>3368.0054.40</td>
+						<td>2016/07/10</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='click'></td>
+					</tr>
+										<tr>
+						<th>13</th>
+						<td>119-86-72200</td>
+						<td>33345.00276.00</td>
+						<td>2016/07/10</td>
 						<td><input type="button" class='btn btn-default btn-sm' value='click'></td>
 					</tr>
 				</tbody>
@@ -84,7 +140,7 @@
 
 		<div id='rlt2'></div>
 
-<script>
+		<script>
 var table = '';
 
 function c1(rows)
@@ -96,10 +152,14 @@ function c1(rows)
 $(function(){
 	table = $('#example2').DataTable();
 });
-</script> 
-{{else}}
+</script> {{else}}
 		<h3>로그인이 필요한 서비스입니다.</h3>
 		{{/if}}
 	</div>
 
+</template>
+
+<template name="blockList">
+	<button>Get Blockchain Data</button>
+	
 </template>
