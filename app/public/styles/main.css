@@ -42,6 +42,7 @@ body {
 	padding-top: 100px;
 }
 #auth_code_con {
+	width: 600px;
 	float: right;
 	padding-top: 100px;
 }
