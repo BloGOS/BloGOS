@@ -33,3 +33,4 @@ cfs:filesystem
 tomi:upload-server
 tomi:upload-jquery
 aldeed:tabular
+aslagle:reactive-table
