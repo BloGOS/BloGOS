@@ -10,9 +10,9 @@
         <link rel="stylesheet" href="animate.min.css">
 
 		<div id="check_pay_img">
-			<img src="/images/3.png" width="400px" height="400px">
-			<h4 class='id_any_check'> 기업의 결제 과정을 확인할 수 있는 페이지 입니다. 
-				보여진 입력 정보는 블록에 전송된 정보로서, 
+			<img class="animated webkit-keyframes flipInX" src="/images/3.png" width="400px" height="400px">
+			<h4 class='id_any_check'> 기업의 결제 과정을 확인할 수 있는 페이지 입니다. <br>
+				보여진 입력 정보는 블록에 전송된 정보로서, <br>
 				우수한 보안 장치에 저장된 자료로 변경 불가 합니다. 
 			</h4>
 
@@ -24,8 +24,8 @@
 					<tr>
 						<th>사업자 등록번호</th>
 						<th>결제 정보</th>
-						<th>수출증빙자료</th>
 						<th>송금내역</th>
+						<th>수출증빙자료</th>
 						<th>날짜</th>
 						<th>송금확인</th>
 						<th>수출사유코드</th>
@@ -35,12 +35,67 @@
 					<tr>
 						<td>1111111111</td>
 						<td>20150312_US30000</td>
-						<td><input type="button" class='btn btn-default btn-sm' value='download'></td>
 						<td>toUS_Fruit</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='download'></td>
 						<td>2011/05/07</td>
 						<td><input type="button" class='btn btn-default btn-sm' value='확인' onclick="c1(0)"></td>
 						<td><input type="button" class='btn btn-default btn-sm' value='생성' onclick="c1(0)"></td>
 					</tr>
+					<tr>
+						<td>2222222222</td>
+						<td>20131102_KW3000000</td>
+						<td>toUS_sw</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='download'></td>
+						<td>2013/11/02</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='확인' onclick="c1(0)"></td>
+						<td><input type="button" class='btn btn-default btn-sm' value='생성' onclick="c1(0)"></td>
+					</tr>
+					<tr>
+						<td>3333333333</td>
+						<td>20100901_US2890000</td>
+						<td>toUS_elec</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='download'></td>
+						<td>2010/09/01</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='확인' onclick="c1(0)"></td>
+						<td><input type="button" class='btn btn-default btn-sm' value='생성' onclick="c1(0)"></td>
+					</tr>
+					<tr>
+						<td>4444444444</td>
+						<td>20160101_US30000</td>
+						<td>toUS_phone</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='download'></td>
+						<td>2016/01/01</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='확인' onclick="c1(0)"></td>
+						<td><input type="button" class='btn btn-default btn-sm' value='생성' onclick="c1(0)"></td>
+					</tr>
+					<tr>
+						<td>5555555555</td>
+						<td>20150301_US7400000</td>
+						<td>toUS_Fruit</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='download'></td>
+						<td>2015/03/01</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='확인' onclick="c1(0)"></td>
+						<td><input type="button" class='btn btn-default btn-sm' value='생성' onclick="c1(0)"></td>
+					</tr>
+					<tr>
+						<td>6666666666</td>
+						<td>20150312_US3400000</td>
+						<td>toUS_Fruit</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='download'></td>
+						<td>2015/03/12</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='확인' onclick="c1(0)"></td>
+						<td><input type="button" class='btn btn-default btn-sm' value='생성' onclick="c1(0)"></td>
+					</tr>
+					<tr>
+						<td>7777777777</td>
+						<td>20160202_US1000000</td>
+						<td>toUS_Fruit</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='download'></td>
+						<td>2016/02/02</td>
+						<td><input type="button" class='btn btn-default btn-sm' value='확인' onclick="c1(0)"></td>
+						<td><input type="button" class='btn btn-default btn-sm' value='생성' onclick="c1(0)"></td>
+					</tr>
+			
 				</tbody>
 			</table>
 		</div>
@@ -53,7 +108,7 @@ var table = '';
 function c1(cl_any_check)
 {
 	this_cl_any_check= table.cl_any_check(cl_any_check).data();
-	$('#id_any_check').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', doSomething);
+	$('#id_any_check').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
 }
 
 $(function(){
