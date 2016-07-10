@@ -6,10 +6,12 @@
 		<link href="/script/jquery-1.12.3.js">
 		<link href="/script/jquery.dataTables.min.js">
 		<link href="/script/datatables.min.js">
+		<link rel="stylesheet" href="styles/animate.css">
+        <link rel="stylesheet" href="animate.min.css">
 
 		<div id="check_pay_img">
 			<img src="/images/3.png" width="400px" height="400px">
-			<h4> 기업의 결제 과정을 확인할 수 있는 페이지 입니다. 
+			<h4 class='id_any_check'> 기업의 결제 과정을 확인할 수 있는 페이지 입니다. 
 				보여진 입력 정보는 블록에 전송된 정보로서, 
 				우수한 보안 장치에 저장된 자료로 변경 불가 합니다. 
 			</h4>
@@ -43,9 +45,31 @@
 			</table>
 		</div>
 
-		<div id='rlt2'></div>
+<div id='id_any_check'></div>
 
-		<script>
+<script>
+var table = '';
+
+function c1(cl_any_check)
+{
+	this_cl_any_check= table.cl_any_check(cl_any_check).data();
+	$('#id_any_check').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', doSomething);
+}
+
+$(function(){
+	table = $('#example2').DataTable();
+});
+</script> 
+
+
+
+
+
+
+
+<div id='rlt2'></div>
+
+<script>
 var table = '';
 
 function c1(rows)
@@ -57,7 +81,11 @@ function c1(rows)
 $(function(){
 	table = $('#example2').DataTable();
 });
-</script> {{else}}
+</script> 
+
+{{else}}
+
+
 		<h3>로그인이 필요한 서비스입니다.</h3>
 		{{/if}}
 	</div>
@@ -65,3 +93,5 @@ $(function(){
 
 
 </template>
+
+
