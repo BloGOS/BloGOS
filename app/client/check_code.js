@@ -3,6 +3,30 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './check_code.html';
 
+blockChain = new Array();
+function hex2s(hexx) {
+    if (hexx == undefined)
+        return 'undefined';
+    var hex = hexx.toString();
+    var str = '';
+    for (var i = 0; i < hex.length; i += 2)
+        str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+    return str;
+}
+
+// CoinStack API
+var accessKey = "8061c671bae4953bc65e7031e676a2";
+var secretKey = "f10de9b10f22087a3bdaf74aafc35d";
+var client = new CoinStack(accessKey, secretKey);
+client.getTransactions("1KGDsKmJo9hMRh53XJLqsGKw23MXfHZWbE", function (err, result) {
+    for (var i in result) {
+        client.getTransaction(result[i], function (e, r) {
+            if (!e) {
+                blockChain.push(hex2s(r.outputs[0].data));
+            }
+        });
+    }
+});
 if (Meteor.isClient) {
     Template.check_code.helpers({
         fields: function () {
@@ -19,16 +43,53 @@ if (Meteor.isClient) {
             }
         }
     });
-    Template.check_code.created = function () {
-        Meteor.call('asyncGetTransactions', function (error, result) {
-            //Session.set("herokuDashboard_appInfo",result);
-        });
-    }
+    Template.check_code.events({
+        'click button'(event, instance) {
+            var id = new Array(30);
+            var b_no = new Array(30);
+            var code = new Array(30);
+            var code_date = new Array(30);
+
+            // id: 001, 002, ..., 030
+            function leadingZeros(n, digits) {
+                var zero = '';
+                n = n.toString();
+                if (digits > n.length) {
+                    for (var i = 0; digits - n.length > i; i++) {
+                        zero += '0';
+                    }
+                }
+                return zero + n;
+            }
+            for (var i = 0; i < 30; i++)
+                id[i] = String(leadingZeros(i + 1, 3));
+
+            // parse blockChain
+            for (var i = 0; i < id.length; i++) {
+                for (var j = 0; j < blockChain.length; j++) {
+                    if (id[i] == blockChain[j].split("|")[0]) {
+                        if (blockChain[j].split("|")[1] == 'r') {
+                            b_no[i] = blockChain[j].split("|")[3];
+                        }
+                        if (blockChain[j].split("|")[1] == 'c') {
+                            code[i] = blockChain[j].split("|")[2];
+                            code_date[i] = blockChain[j].split("|")[3];
+                        }
+                    }
+                }
+            }
+            console.log(b_no);
+            // insert collection
+            for (var i = 0; i < id.length; i++) {
+                if (id[i] != undefined)
+                    Blocks.insert({ id: id[i], b_no: b_no[i], code: code[i], code_date: code_date[i] });
+            }
+        }
+    });
 }
 
 if (Meteor.isServer) {
-    Meteor.startup(function () { 
-  // ReactiveTable publish
-  
+    //Meteor.call(asyncGetTransactions);
+    Meteor.startup(function () {
     });
 }
