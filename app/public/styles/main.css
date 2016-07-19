@@ -69,10 +69,14 @@ body {
 	padding-top: 100px;
 }
 #check_code_con {
+	width: 600px;
 	float: right;
 	padding-top: 100px;
 }
 
+.sortable {
+	text-align: center;
+}
 
 #check_pay_img {
 	width: 400px;

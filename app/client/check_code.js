@@ -49,6 +49,7 @@ if (Meteor.isClient) {
             var b_no = new Array(30);
             var code = new Array(30);
             var code_date = new Array(30);
+            var code_date_tmp = new Array(30);
 
             // id: 001, 002, ..., 030
             function leadingZeros(n, digits) {
@@ -73,12 +74,20 @@ if (Meteor.isClient) {
                         }
                         if (blockChain[j].split("|")[1] == 'c') {
                             code[i] = blockChain[j].split("|")[2];
-                            code_date[i] = blockChain[j].split("|")[3];
+                            code_date_tmp[i] = blockChain[j].split("|")[3];
                         }
                     }
                 }
             }
-            console.log(b_no);
+
+            // Date
+            for (var i = 0; i < id.length; i++) {
+                if (code_date_tmp[i] != undefined) {
+                    var date_tmp = new Date(code_date_tmp[i] * 1000);
+                    code_date[i] = date_tmp.getFullYear() + "/" + (date_tmp.getMonth() + 1) + "/" + date_tmp.getDate();
+                }
+            }
+
             // insert collection
             for (var i = 0; i < id.length; i++) {
                 if (id[i] != undefined)
