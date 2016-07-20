@@ -38,13 +38,15 @@ if (Meteor.isClient) {
                     { key: 'id', label: '아이디' },
                     { key: 'b_no', label: '사업자번호' },
                     { key: 'code', label: '사유코드' },
-                    { key: 'code_date', label: '날짜' }
+                    { key: 'code_date', label: '날짜' },
+                    { label: '승인', tmpl: Template.confirm_button }
                 ]
             }
         }
     });
+
     Template.check_code.events({
-        'click button'(event, instance) {
+        'click #update_button'(event, instance) {
             var id = new Array(30);
             var b_no = new Array(30);
             var code = new Array(30);
