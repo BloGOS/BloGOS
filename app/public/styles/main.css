@@ -89,3 +89,6 @@ body {
 	padding-top: 100px;
 }
 
+#update_button {
+	float: left;
+}

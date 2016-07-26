@@ -9,18 +9,50 @@
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
 
 		<div id="check_code_img">
-			<img src="/images/4.png" width="400px" height="400px">
+			<img class="animated webkit-keyframes flipInX" src="/images/4.png" width="400px" height="400px">
 			<h4 class="animated pulse"> 블록체인에 있는 기업의 수출사유코드를 확인할 수 있는 페이지 입니다. 수출사유코드가 존재한다면, IBK에서 인정한 수출 실적 1건임이 증명됩니다.</h4>
 		</div>
 		<div id="check_code_con">
-			<button id="update_button">업데이트</button>
-			{{> reactiveTable id="example1" collection="blocks" settings=tableSettings}}
+			<button id="update_button" class="btn btn-default btn-sm">업데이트</button> 
+			{{> reactiveTable id="example1" class="display dataTable no-footer" collection="blocks" settings=tableSettings}}
 		</div> {{else}}
 		<h3>로그인이 필요한 서비스입니다.</h3>
 		{{/if}}
 	</div>
-</template> 
+
+	<div id='id_any_check'></div>
+
+
+	<script>
+var table = '';
+
+function c1(cl_any_check)
+{
+	this_cl_any_check= table.cl_any_check(cl_any_check).data();
+	$('#id_any_check').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
+}
+
+$(function(){
+	table = $('#example1').DataTable();
+});
+</script>
+	<div id='rlt2'></div>
+
+	<script>
+var table = '';
+
+function c1(rows)
+{
+	this_row = table.rows(rows).data();
+	$('#rlt2').html( );
+}
+
+$(function(){
+	table = $('#example1').DataTable();
+});
+</script>
+</template>
 
 <template name="confirm_button">
-	<button>승인</button>
+	<button class="btn btn-default btn-sm">승인</button>
 </template>
