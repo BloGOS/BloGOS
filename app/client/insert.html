@@ -1,40 +1,60 @@
 <template name="insert">
-    <div class="container">
-   
-	{{#if currentUser}}	
+	<div class="container">
+
+		{{#if currentUser}}
 		<div id="insert_code_img">
-				<img class="animated webkit-keyframes flipInX" src="/images/2.png" width="400px" height="400px" >
-				<h4 class="animated pulse"> 결제정보와 수출증빙자료를 전송하는 페이지 입니다.<br>
-					전송된 자료는 실시간으로 블록에 전송하여,<br> 거래 과정을 확인하도록 도와줍니다. 
-				</h4>
+			<img class="animated webkit-keyframes flipInX" src="/images/2.png" width="400px" height="400px">
+			<h4 class="animated pulse"> 결제정보와 수출증빙자료를 전송하는 페이지 입니다.<br> 전송된 자료는 실시간으로 블록에 전송하여,<br> 거래 과정을 확인하도록 도와줍니다.
+			</h4>
 
 		</div>
 
 		<div id="insert_code_con">
-		<br>
-		<h4>결제 정보 입력</h4>
-		<br>
-		<form>
-			<input type="text" id="post" class="i" size="80" placeholder="송금ID|i|기업ID|물품코드|가격|"/>
-			<button>
-				<span>완료</span>
-			</button>
-		</form>
+			<br>
+			<br>
+			<br>
+			<br>
+			<form class="form-inline">
+				<div class="form-group">
+					<label for="payInfo">결제 정보 입력</label><br>
+					<input type="text" id="post" class="form-control" size="73" placeholder="송금ID|i|기업ID|물품코드|가격|" />
+					<button type="submit" class="btn btn-default">완료</button>
+				</div>
+			</form>
 
-		
-		<br><br><br>
+			<br>
+			<br>
+			<br>
+			<br>
 
-		
-		
-		<br>
-		<h4>수출 증빙 자료 전송</h4>
-
-		{{> fileList}}
-	
+			<label>수출 증빙 자료 전송</label>
+			{{> fileList}}
 		</div>
 		{{else}}
 		<h3>로그인이 필요한 서비스입니다.</h3>
 		{{/if}}
-    </div>
-   
+	</div>
+
+</template>
+
+<template name="fileList">
+	<br>
+	<div id="fileupload_check">
+		{{> upload_bootstrap}}
+
+		<table border="1">
+			<tbody>
+				{{#each theFiles}}
+				<tr>
+					<td>{{uploadedAt}}</td>
+					<td>{{original.name}}</td>
+					<td><a href="{{url}}">link</a></td>
+					<td>{{#if isUploaded}}uploaded{{else}}uploading...{{/if}}</td>
+					<td><button id="deleteFileButton">delete</button></td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+
+	</div>
 </template>
