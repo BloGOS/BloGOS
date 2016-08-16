@@ -10,25 +10,36 @@
 		</div>
 
 		<div id="insert_code_con">
-			<br>
-			<br>
-			<br>
-			<br>
-			<form class="form-inline">
+			<label>수출정보 입력</label><br>
+			<form class="form-horizontal" role="form">
+				<label for="remittance-id" class="control-label col-sm-2">송금ID</label>
+				<div class="form-group col-sm-offset-2 col-sm-10">
+					<input type="text" class="form-control" id="remittance-id" placeholder="송금ID 입력">
+				</div>
+				<label for="i" class="control-label col-sm-2">i</label>
+				<div class="form-group col-sm-offset-2 col-sm-10">
+					<input type="text" class="form-control" id="i" placeholder="i">
+				</div>
+				<label for="company-id" class="control-label col-sm-2">기업ID</label>
+				<div class="form-group col-sm-offset-2 col-sm-10">
+					<input type="text" class="form-control" id="company-id" placeholder="기업ID">
+				</div>
+				<label for="goods-code" class="control-label col-sm-2">물품코드</label>
+				<div class="form-group col-sm-offset-2 col-sm-10">
+					<input type="text" class="form-control" id="goods-code" placeholder="물품코드 입력">
+				</div>
+				<label for="price" class="control-label col-sm-2">가격</label>
+				<div class="form-group col-sm-offset-2 col-sm-10">
+					<input type="text" class="form-control" id="price" placeholder="가격 입력">
+				</div>
+				<label for="fileupload" class="control-label col-sm-2">증빙자료</label>
+				{{> fileList}}
 				<div class="form-group">
-					<label for="payInfo">결제 정보 입력</label><br>
-					<input type="text" id="post" class="form-control" size="73" placeholder="송금ID|i|기업ID|물품코드|가격|" />
-					<button type="submit" class="btn btn-default">완료</button>
+					<button type="submit" class="btn btn-default">제출</button>
 				</div>
 			</form>
-
 			<br>
-			<br>
-			<br>
-			<br>
-
-			<label>수출 증빙 자료 전송</label>
-			{{> fileList}}
+			
 		</div>
 		{{else}}
 		<h3>로그인이 필요한 서비스입니다.</h3>
@@ -38,8 +49,7 @@
 </template>
 
 <template name="fileList">
-	<br>
-	<div id="fileupload_check">
+	<div id="fileupload_check" class="form-group col-sm-offset-2 col-sm-10">
 		{{> upload_bootstrap}}
 
 		<table border="1">
@@ -55,6 +65,5 @@
 				{{/each}}
 			</tbody>
 		</table>
-
 	</div>
 </template>

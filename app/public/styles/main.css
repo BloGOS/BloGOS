@@ -54,13 +54,8 @@ body {
 }
 #insert_code_con {
 	float: right;
-	padding-top: 100px;
-}
-
-
-#fileupload_check{
 	width: 600px;
-	float: right;
+	padding-top: 100px;
 }
 
 #check_code_img {
